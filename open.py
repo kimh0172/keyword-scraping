@@ -2,8 +2,9 @@
 import webbrowser
 import pyautogui
 import time
-#Input Google Params
-keyword = input('enter your keyword\n')
+#Input Keywords and Client Website
+keyword = input('Enter your keyword\n')
+client_website = input('Your client website\n')
 url = 'https://google.com/search?q=' + keyword
 webbrowser.open(url)
 #search for keywords
@@ -13,7 +14,7 @@ pyautogui.hotkey('command','f')
 time.sleep(2)
 pyautogui.hotkey('command','a')
 time.sleep(2)
-pyautogui.write('vasgroup')
+pyautogui.write(client_website)
 time.sleep(5)
 def screenshot():
     screenshot = pyautogui.screenshot()
